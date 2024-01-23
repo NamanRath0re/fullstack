@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Form</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="name">Enter your name:</label>
+            <input type="text" id="name" name="fn">
+        </div>
+        <div>
+            <label for="em">Enter your email:</label>
+            <input type="email" name="email" id="em">
+        </div>
+        <!-- radio -->
+        <div>
+            <label>Select your gender:</label>
+            <input type="radio" name="gen" id="m">
+            <label for="m">Male</label>
+            <input type="radio" name="gen" id="fm">
+            <label for="fm">Female</label>
+        </div>
+        <!-- checkbox -->
+        <div>
+            <label>select your fav language:</label>
+            <input type="checkbox" id="b">
+            <label for="b">HTML</label>
+            <input type="checkbox" id="bl">
+            <label for="bl">CSS</label>
+            <input type="checkbox" id="r">
+            <label for="r">JS</label>
+            <input type="checkbox" id="re">
+            <label for="re">React</label>
+        </div>
+        <!-- dropdown -->
+        <div>
+            <label for="flowers">choose your fav color:</label>
+            <select name="color" id="flowers">
+
+                <option value="Red">Red</option>
+                <option value="Green">Green</option>
+                <option value="Black">Black</option>
+                <option value="Pink">Pink</option>
+            </select>
+        </div>
+        <!-- datalist -->
+        <div>
+            <label for="fr">select your fav fruit:</label>
+            <input type="text" name="fruit" id="fr" list="mydata">
+            <datalist id="mydata">
+                <option value="apple"></option>
+                <option value="banana"></option>
+                <option value="mango"></option>
+                <option value="orange  "></option>
+            </datalist>
+        </div>
+    </form>
+</body>
+</html>
