@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-commerce Website</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="shortcut icon" href="./assets/logo.jpeg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="header">
+      <a href="#"><img src="./assets/logo.jpeg" alt="" /></a>
+
+      <div>
+        <ul id="nav">
+          <li class="active"><a href="">Home</a></li>
+          <li><a href="./html/product.html">Products</a></li>
+          <!-- <li><a href="./html/shpo.html">Shop</a></li> -->
+          <li><a href="./html/about.html">About</a></li>
+          <li><a href="./html/contact.html">Contact</a></li>
+          <li>
+            <a href=""><i class="fa-solid fa-bag-shopping"></i></a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div id="hero">
+      <h4>Trade-in-offer</h4>
+      <h2>Super value deals</h2>
+      <h1>On all products</h1>
+      <p>Save more with coupons & up to 70& off!</p>
+      <button>Shop Now</button>
+    </div>
+
+    <section id="feature" class="section-p1">
+      <div class="f-box">
+        <img src="./assets/f1.png" alt="" />
+        <h6>Free shiping</h6>
+      </div>
+      <div class="f-box">
+        <img src="./assets/f2.png" alt="" />
+        <h6>Online Order</h6>
+      </div>
+      <div class="f-box">
+        <img src="./assets/f3.png" alt="" />
+        <h6>Save Money</h6>
+      </div>
+      <div class="f-box">
+        <img src="./assets/f4.png" alt="" />
+        <h6>Promotions</h6>
+      </div>
+      <div class="f-box">
+        <img src="./assets/f5.png" alt="" />
+        <h6>Happy Sell</h6>
+      </div>
+      <div class="f-box">
+        <img src="./assets/f6.png" alt="" />
+        <h6>24/7 Support</h6>
+      </div>
+    </section>
+
+    <section id="slides" class="section-p1">
+      <h1>Featured Products</h1>
+      <p>Summer collection New Modern Design</p>
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+
+          
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+        <div class="swiper-scrollbar"></div>
+      </div>
+    </section>
+
+    <section id="banner"></section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/script.js"></script>
+    <script>
+          document.addEventListener('DOMContentLoaded',function(){
+            const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        //    effect: 'cube',
+        //    grabCursor: true,
+        //    cubeEffect: {
+        //     // shadow: true,
+        //     shadowOffset:20,
+        //     slideScale:0.94,
+        //    },
+        loop: false,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+
+      })
+      
+    </script>
+    
+  </body>
+</html>

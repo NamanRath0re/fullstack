@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #a,#b{
+            height: 25vh;
+            width: 25%;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="a"><button onclick="first()">change B</button></div>
+    <div id="b"><button onclick="second()">change A</button></div>
+    <!-- <input type="text" id="input">
+    <button onclick="myfun()">click</button> -->
+    <script>
+        // function first()
+        // {
+        //     const random="#" + Math.round(Math.random()*10000000).toString(16)
+        //     document.getElementById()
+        // }
+        function first()
+{
+    const ele = document.getElementById('b');
+    console.log(ele)
+    ele.style.backgroundColor =
+			"#" + Math.round(Math.random() * 10000000).toString(16)
+}
+//i want it to generate any color-->HINT: every color will hex code like #c89c60
+
+function second() {
+	const ele = document.getElementById("a")
+	console.log(ele)
+	ele.style.backgroundColor =
+		"#" + Math.round(Math.random() * 10000000).toString(16)
+}
+
+
+
+        // function myfun()
+        //   {
+        //     const str=document.getElementById('input').value
+        //     str.split(' ').join('')
+        //     console.log(str)
+        //     count=0
+            
+
+        //   }
+    </script>
+</body>
+</html>

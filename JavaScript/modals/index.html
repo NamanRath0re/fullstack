@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .modal {
+        height: 200px;
+        background-color: forestgreen;
+        /* display: none; */
+      }
+      .dark {
+        background-color: black;
+        color: white;
+      }
+      .change {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="modal">
+      <div class="head">this is head body</div>
+      <div class="body">this is head body</div>
+      <div class="foot">this is head body</div>
+    </div>
+    <button onclick="fun()">open/close</button>
+    <button onclick="change()">change</button>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquam
+      aspernatur eius architecto ratione rem deleniti quae, error numquam, odit
+      repudiandae saepe incidunt veniam quidem porro atque, asperiores iure
+      exercitationem facere ipsum velit voluptatem. Vero quia sunt velit,
+      numquam nam ipsa est maiores obcaecati, error animi laboriosam aperiam
+      quasi enim architecto!
+    </p>
+
+    <script>
+      let isopen = false
+      function fun() {
+        // const modal = document.querySelector(".modal");
+        // modal.classList.toggle("change");
+        const modal1 = document.querySelector(".modal");
+        if (isopen) {
+          modal1.style.display = "none";
+          isopen = false
+        } else {
+          modal1.style.display = "block";
+          isopen = true
+        }
+      }
+
+      function change() {
+        document.body.classList.toggle("dark");
+      }
+      
+    </script>
+  </body>
+</html>

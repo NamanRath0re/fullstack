@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start ;
+    background-color: black;
+    color: white;
+}
+#main{
+    width:50vw;
+}
+button{
+    height:2rem;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: .2rem;
+    font-size:large;
+    font-weight: 800;
+}
+
+
+
+
+.con1{
+    display:none
+}
+.con2{
+    display:none
+}
+.con3{
+    display:none
+}

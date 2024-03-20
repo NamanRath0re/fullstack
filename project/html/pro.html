@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <section class="header">
+        <a href="#"><img src="../assets/logo.jpeg" alt="" /></a>
+  
+        <div>
+          <ul id="nav">
+            <li ><a href="../index.html">Home</a></li>
+            <li class="active"><a href="./html/product.html">Products</a></li>
+            <!-- <li><a href="./shop.html">Shop</a></li> -->
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li>
+              <a href=""><i class="fa-solid fa-bag-shopping"></i><sup id="cart-badge">0</sup></a>
+            </li>
+          </ul>
+        </div>
+    </section>
+    <!-- <div>
+      product id:
+      <p id="pid"></p>
+    </div> -->
+   
+    <div class="produ">
+
+    </div>
+   
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      console.log(params);
+      const id = params.get("id");
+      console.log(id);
+    //   document.getElementById("pid").textContent = id;
+
+      let products = JSON.parse(localStorage.getItem("products"));
+      console.log(products);
+      let prod =document.querySelector(".produ");
+   
+    // let cart = []
+      function displayData(products) {
+        prod.textContent = "";
+        products.forEach((el) => {
+          const div = document.createElement("div");
+          div.classList.add("img-pro");
+          const div1 = document.createElement("div");
+          const images = document.createElement('div')
+          images.addEventListener('click',addphoto)
+          images.classList.add='btnimg'
+          el.images.forEach((v)=>{
+            const btn2 = document.createElement('button')
+            btn2.classList.add='img-btn'
+            const im =document.createElement('img')
+            im.height="60"
+            im.src=v
+            btn2.append(im)
+            images.append(btn2)
+          })
+          const div2 = document.createElement("div");
+          div2.classList.add("des-pro");
+          const img = document.createElement("img");
+          img.classList.add('imagess')
+          img.src = el.thumbnail;
+          img.alt = el.title;
+          
+          const brand = document.createElement("p");
+          brand.textContent = el.brand;
+          const des = document.createElement("p");
+          des.textContent = el.description;
+          const price = document.createElement("p")
+          price.textContent= "Price: $"+ el.price
+
+          const title = document.createElement("h4");
+          title.textContent = el.title;
+        //   const btn = document.createElement("button")
+        //   btn.addEventListener('click',addtocart)
+        //   btn.setAttribute('data-cart',JSON.stringify(el))
+        //   btn.textContent="Add to cart"
+        //   console.log(btn)
+
+          div1.append(img,images)
+          div2.append(title,brand, price,des)
+          div.append(div1,div2);
+          prod.append(div);
+        });
+      }
+      function addphoto(e){
+        // alert(e.target.src)
+        document.querySelector('.imagess').src=e.target.src
+      }
+    //  displayData(products)
+      let filteredProducts = [];
+    //   window.addEventListener("DOMcontentloaded",
+      function filterdata (products) 
+      {
+        console.log("hii")
+        filteredProducts = products.filter((pro) => pro.id == id);
+        console.log(filteredProducts)
+        displayData(filteredProducts);
+      }
+      filterdata(products)
+
+
+
+    //   function addtocart(e)
+    //   {
+    //     const item=e.target.getAttribute('data-cart')
+    //     cart.push(item)
+    //     localStorage.setItem('cart',cart)
+    //     document.getElementById('cart-badge').textContent=cart.length
+    //   }
+    </script>
+  </body>
+</html>

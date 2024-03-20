@@ -1,0 +1,95 @@
+/* [{"id":1,"name":"Classic Margherita Pizza","ingredients":["Pizza dough","Tomato sauce","Fresh mozzarella cheese","Fresh basil leaves","Olive oil","Salt and pepper to taste"],"instructions":["Preheat the oven to 475°F (245°C).","Roll out the pizza dough and spread tomato sauce evenly.","Top with slices of fresh mozzarella and fresh basil leaves.","Drizzle with olive oil and season with salt and pepper.","Bake in the preheated oven for 12-15 minutes or until the crust is golden brown.","Slice and serve hot."],"prepTimeMinutes":20,"cookTimeMinutes":15,"servings":4,"difficulty":"Easy","cuisine":"Italian","caloriesPerServing":300,"tags":["Pizza","Italian"],"userId":45,"image":"https://cdn.dummyjson.com/recipe-images/1.webp","rating":4.6,"reviewCount":3,"mealType":["Dinner"]} */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    background-color: rgb(0, 0, 0);
+    color: white;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+}
+#main{
+    height: 100vh;
+    width: 98vw;
+    
+}
+#display{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-around;
+    align-items: center;
+    gap: 3rem;
+    background-color: rgb(156, 136, 136);
+}
+.dt{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .5rem;
+    background-color: brown;
+    color: white;
+    border-radius: 2rem;
+    overflow: hidden;
+}
+button{
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: black;
+    color: white;
+    margin:5px 5px;
+    border: none;
+}
+#display img{
+    height: 460px;
+    width:460px;
+}
+.modal{
+    display: none;
+    /* height: 50vh; */
+    width: 400px;
+    position: fixed;
+    transform: translate(-50%,-50%);
+    top:50% ;
+    left:50% ;
+    background-color: rgb(0, 0, 0);
+    z-index: 69999;
+    padding:1rem;
+    text-align: center;
+    border-radius:2rem;
+    color: white;
+    border: none;
+    font-weight: 500;
+}
+.modal  h3,
+.modal  p{
+    
+   padding: .3rem 0;
+}
+.modal button{
+    background-color: bisque;
+    color: black;
+    border: none;
+}
+
+@media (max-width:480px){
+    #display{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+@media  (min-width:481px) and (max-width:768px){
+    #display{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <input type="text" id="txt">
+    <button onclick="fun()">click</button>
+    <p id="p"></p> -->
+    <input type="text" id="txt" placeholder="Enter A string" />
+    <button onclick="fun()">Click me</button>
+    <p id="p"></p>
+
+    <script>
+      function fun() {
+        const ip = document.getElementById("txt");
+        console.log(ip.value);
+        let count=0;
+        for (let i = 0; i < ip.value.length; i++) {
+          if (
+            ip.value[i] == "a" ||
+            ip.value[i] == "e" ||
+            ip.value[i] == "i" ||
+            ip.value[i] == "o" ||
+            ip.value[i] == "u"
+          ) {
+            count++;
+          }
+        }
+        const data = document.getElementById("p");
+        data.textContent ='no of vowels'+ count;
+      }
+
+      // function fun(){
+      // const ip=document.getElementById('txt')
+      // console.log(ip.value)
+      // const data=document.getElementById('p')
+      // data.textContent=ip.value
+      //}
+    </script>
+  </body>
+</html>

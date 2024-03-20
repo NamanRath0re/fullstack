@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <script>
+        class Student {
+            constructor(n,r,m)
+            {
+                this.name=n;
+                this.rollno=r;
+                this.marks=m
+            }
+            function (){
+                if(this.marks>35){
+                    console.log(this.name + " passed")
+                }
+                else{
+                    console.log(this.name + "failed")
+                }
+            }
+        }
+        let obj = new Student("Naman",101,99)
+        let obj2 = new Student("john",102,34)
+        obj.function()
+        obj2.function()
+
+    </script>
+</body>
+</html>

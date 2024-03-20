@@ -1,0 +1,70 @@
+/* p{
+    background-color: skyblue;
+} */
+
+/* .para{
+    background: red;
+} */
+
+/* #name, .para{
+    color: cadetblue ;
+} */
+
+/* #name p{
+    color: burlywood;
+} */
+
+/* div>p{
+    color: red;
+} */
+
+div +p{
+    color: gold;
+}
+
+.para::first-line{
+    color: olive;
+}
+
+.para::first-letter{
+    font-size: 32px;
+}
+
+.para::after{
+    content: '"""""""""""""""""""""';
+}
+
+#mydiv a:link{
+    background: green;
+} 
+#mydiv a:active{
+    background: blue;
+    color: white;
+}
+
+a:hover{
+    background: red;
+}
+
+input[type=text]{
+    background-color: aquamarine;
+}
+
+#main {
+    height: 500px;
+    width: 500px;
+    border: 1px solid;
+}
+
+.child{
+    height: 100px;
+    width: 150px;
+    border: 1px solid red;
+}
+/* .child:nth-child(o){
+    background-color: red;
+} */
+.child:nth-last-child(){}
+.child:nth-of-type(){
+    background: navy;
+}
